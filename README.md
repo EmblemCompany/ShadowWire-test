@@ -5,7 +5,7 @@ Private payments on Solana using zero-knowledge proofs.
 ## Features
 
 - **Private Transfers** - Hide transaction amounts using Bulletproofs
-- **Multi-Token Support** - SOL, USDC, ORE, BONK, JIM, GODL
+- **Multi-Token Support** - SOL, USDC, ORE, BONK, JIM, GODL, HUSTLE
 - **Multiple Wallets** - Phantom, Solflare, Torus, Ledger
 - **Deposit & Withdraw** - Seamlessly manage your ShadowWire balance
 - **Fast & Secure** - Built on Solana with audited smart contracts
@@ -74,14 +74,15 @@ Click "Select Wallet" and choose your preferred Solana wallet (Phantom, Solflare
 
 ## Supported Tokens
 
-| Token | Decimals |
-|-------|----------|
-| SOL   | 9        |
-| USDC  | 6        |
-| ORE   | 11       |
-| BONK  | 5        |
-| JIM   | 9        |
-| GODL  | 11       |
+| Token  | Decimals |
+|--------|----------|
+| SOL    | 9        |
+| USDC   | 6        |
+| ORE    | 11       |
+| BONK   | 5        |
+| JIM    | 9        |
+| GODL   | 11       |
+| HUSTLE | 9        |
 
 ## Tech Stack
 
@@ -95,7 +96,7 @@ Click "Select Wallet" and choose your preferred Solana wallet (Phantom, Solflare
 
 ### Supporting Only Specific Tokens
 
-By default, the app supports all ShadowWire tokens (SOL, USDC, ORE, BONK, JIM, GODL). To limit to specific tokens:
+By default, the app supports all ShadowWire tokens (SOL, USDC, ORE, BONK, JIM, GODL, HUSTLE). To limit to specific tokens:
 
 1. Open `components/Dashboard.tsx`
 2. Modify the `SUPPORTED_TOKENS` array:

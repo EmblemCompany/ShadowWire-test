@@ -33,6 +33,7 @@ export function DepositForm({
       BONK: 5,
       JIM: 9,
       GODL: 11,
+      Hustle: 9,
     }
     return decimals[token] || 9
   }
@@ -69,7 +70,7 @@ export function DepositForm({
       const response = await client.deposit({
         wallet: walletAddress,
         amount: amountInSmallestUnit,
-        token: selectedToken,
+        token_mint: selectedToken,
       })
 
       console.log('Deposit response:', response)

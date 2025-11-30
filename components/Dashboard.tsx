@@ -8,7 +8,7 @@ import { BalanceCard } from './BalanceCard'
 import { DepositForm } from './DepositForm'
 import { WithdrawForm } from './WithdrawForm'
 
-const SUPPORTED_TOKENS = ['SOL', 'USDC', 'ORE', 'BONK', 'JIM', 'GODL'] as const
+const SUPPORTED_TOKENS = ['SOL', 'USDC', 'ORE', 'BONK', 'JIM', 'GODL', 'HUSTLE'] as const
 type Token = typeof SUPPORTED_TOKENS[number]
 type ActiveTab = 'deposit' | 'withdraw' | 'transfer'
 
@@ -64,7 +64,7 @@ export function Dashboard() {
           <label className="block text-sm font-medium text-gray-400 mb-3">
             Select Token
           </label>
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-7 gap-3">
             {SUPPORTED_TOKENS.map((token) => (
               <button
                 key={token}

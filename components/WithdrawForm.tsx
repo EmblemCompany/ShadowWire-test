@@ -35,6 +35,7 @@ export function WithdrawForm({
       BONK: 5,
       JIM: 9,
       GODL: 11,
+      Hustle: 9,
     }
     return decimals[token] || 9
   }
@@ -75,7 +76,7 @@ export function WithdrawForm({
       const response = await client.withdraw({
         wallet: walletAddress,
         amount: amountInSmallestUnit,
-        token: selectedToken,
+        token_mint: selectedToken,
       })
 
       console.log('Withdraw response:', response)

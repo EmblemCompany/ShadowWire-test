@@ -1,13 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import { ShadowWireClient, RecipientNotFoundError, InsufficientBalanceError } from '@radr/shadowwire'
+import { ShadowWireClient, RecipientNotFoundError, InsufficientBalanceError, TokenSymbol } from '@radr/shadowwire'
 import { useWallet } from '@solana/wallet-adapter-react'
 
 interface TransferFormProps {
   client: ShadowWireClient
   senderWallet: string
-  selectedToken: string
+  selectedToken: TokenSymbol
   currentBalance: number
   onTransferComplete: () => void
 }
@@ -37,6 +37,7 @@ export function TransferForm({
       BONK: 5,
       JIM: 9,
       GODL: 11,
+      Hustle: 9,
     }
     return decimals[token] || 9
   }

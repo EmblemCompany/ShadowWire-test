@@ -59,7 +59,7 @@ export function LandingPage() {
             </div>
             <h3 className="text-xl font-bold mb-2">Multi-Token Support</h3>
             <p className="text-gray-400">
-              Send SOL, USDC, ORE, BONK, JIM, and GODL with complete privacy.
+              Send SOL, USDC, ORE, BONK, JIM, GODL, and Hustle with complete privacy.
             </p>
           </div>
         </div>

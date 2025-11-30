@@ -19,6 +19,7 @@ export function BalanceCard({ token, balance, loading, error, onRefresh }: Balan
       BONK: 5,
       JIM: 9,
       GODL: 11,
+      Hustle: 9,
     }
     return decimals[token] || 9
   }
