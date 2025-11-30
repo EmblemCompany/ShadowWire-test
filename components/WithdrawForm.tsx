@@ -35,7 +35,7 @@ export function WithdrawForm({
       BONK: 5,
       JIM: 9,
       GODL: 11,
-      Hustle: 9,
+      HUSTLE: 9,
     }
     return decimals[token] || 9
   }
