@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ShadowWireClient } from '@radr/shadowwire'
+import { ShadowWireClient, TokenUtils, TokenSymbol } from '@radr/shadowwire'
 import { useWallet, useConnection } from '@solana/wallet-adapter-react'
 import { Transaction, VersionedTransaction } from '@solana/web3.js'
 
@@ -70,7 +70,7 @@ export function DepositForm({
       const response = await client.deposit({
         wallet: walletAddress,
         amount: amountInSmallestUnit,
-        token_mint: selectedToken,
+        token_mint: TokenUtils.getTokenMint(selectedToken as TokenSymbol),
       })
 
       console.log('Deposit response:', response)

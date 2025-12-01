@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ShadowWireClient } from '@radr/shadowwire'
+import { ShadowWireClient, TokenUtils, TokenSymbol } from '@radr/shadowwire'
 import { useWallet, useConnection } from '@solana/wallet-adapter-react'
 import { Transaction, VersionedTransaction } from '@solana/web3.js'
 
@@ -76,7 +76,7 @@ export function WithdrawForm({
       const response = await client.withdraw({
         wallet: walletAddress,
         amount: amountInSmallestUnit,
-        token_mint: selectedToken,
+        token_mint: TokenUtils.getTokenMint(selectedToken as TokenSymbol),
       })
 
       console.log('Withdraw response:', response)
